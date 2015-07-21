@@ -1,0 +1,10 @@
+n1 = csvread('network_1.dat');
+M = zeros(1000);
+for i = drange(1, 15381)
+        j = n1(i, 1);
+        k = n1(i, 2);
+        M[j, k] = 1
+end;
+
+% M = full(n1);
+% cluster_jl_cpp(M,1,1,1);
