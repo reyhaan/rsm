@@ -2,6 +2,7 @@
 % M = full(Problem.A);
 % findCommunityPara(M,1.6);
 
+% something
 A = csvread('Networks/Network.1/network.dat');
 M = sparse(A(length(A), 1), A(length(A), 1));
 M = full(M);
