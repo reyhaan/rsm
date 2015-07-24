@@ -13,5 +13,5 @@ for i = drange(1, length(A))
         M(k, j) = 1;
         M(j, k) = 1;
 end;
-findCommunityPara(M,0.38);
 
+findCommunityPara(M,0.38);

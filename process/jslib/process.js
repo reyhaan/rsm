@@ -41,11 +41,11 @@ var getSimilarArray = function(gen_nodes, rsm_nodes, target_node) {
 				target_node_found = true;
 			}
 		}
-		
+
 		if(rsm_nodes.hasOwnProperty(nodes) && target_node_found) {
 			len_rsm_nodes = rsm_nodes[nodes].length;
 			if(len_gen_nodes > len_rsm_nodes) {
-				
+
 				for(var i = 0; i < gen_nodes.length; i++) {
 					for(var j = 0; j < rsm_nodes[nodes].length; j++) {
 						if(parseInt(gen_nodes[i]) == parseInt(rsm_nodes[nodes][j])) {
@@ -54,7 +54,7 @@ var getSimilarArray = function(gen_nodes, rsm_nodes, target_node) {
 					}
 				}
 				similar_array.push(similar_index/len_gen_nodes)
-			
+
 			} else {
 
 				for(var i = 0; i < rsm_nodes[nodes].length; i++) {
@@ -95,7 +95,7 @@ var getSimilarArray = function(gen_nodes, rsm_nodes, target_node) {
 	}
 
 	var shortest_length = 0;
-	
+
 	// This loop is fetching the best nodeset from the equal similar index nodesets array.
 	for(var i = 0; i < similar_index_object[comparison_index].length; i++) {
 		if((shortest_length < rsm_nodes[similar_index_object[comparison_index][i]].length) && (len_gen_nodes <= rsm_nodes[similar_index_object[comparison_index][i]].length)) {
@@ -114,7 +114,7 @@ $.get("../rsm_com/communities.txt", function(data) {
 	data = data.split("#");
 	for(var i = 0; i < data.length; i++) {
 		if(data[i] != "\n") {
-			rsm_nodes[i+1] = data[i].trim().split("\n"); 
+			rsm_nodes[i+1] = data[i].trim().split("\n");
 		}
 	}
 
@@ -143,5 +143,3 @@ $.get("../rsm_com/communities.txt", function(data) {
 	});
 
 });
-
-
