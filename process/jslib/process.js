@@ -164,11 +164,11 @@ var recallLink = [0.99, 1, 1, 1, 1, 1, 1];
 var recallGce = [0.25, 0.02, 0, 0, 0, 0, 0];
 
 // fscore data
-var fscoreCopra = [];
-var fscoreCis = [];
-var fscoreCfinder = [];
-var fscoreLink = [];
-var fscoreGce = [];
+var fscoreCopra = [0.28, 0.29, 0.29, 0.25, 0.23, 0.22, 0.22];
+var fscoreCis = [0.2, 0.05, 0.04, 0.03, 0.03, 0.04, 0.02];
+var fscoreCfinder = [0.38, 0.37, 0.35, 0.30, 0.28, 0.25, 0.22];
+var fscoreLink = [0.19, 0.19, 0.19, 0.19, 0.19, 0.19, 0.19];
+var fscoreGce = [0.37, 0.03, 0.01, 0.01, 0.02, 0.04, 0.05];
 
 var data = {
 	precision: {
@@ -255,7 +255,8 @@ var plot = function(data, graph) {
                 lineWidth: 1
             }],
             legend: {
-                enabled: false
+                enabled: true,
+                layout: "vertical"
             },
             credits: {
                 enabled: false
@@ -269,7 +270,7 @@ var plot = function(data, graph) {
             },
             series: [{
                 type: "line",
-                name: name,
+                name: "RSM",
                 color: "#FF0000",
                 pointInterval: 1,
                 pointStart: 2,
@@ -277,7 +278,7 @@ var plot = function(data, graph) {
             },
             {
                 type: "line",
-                name: name,
+                name: "COPRA",
                 color: "green",
                 pointInterval: 1,
                 pointStart: 2,
@@ -285,7 +286,7 @@ var plot = function(data, graph) {
             },
             {
                 type: "line",
-                name: name,
+                name: "CIS",
                 color: "blue",
                 pointInterval: 1,
                 pointStart: 2,
@@ -293,7 +294,7 @@ var plot = function(data, graph) {
             },
             {
                 type: "line",
-                name: name,
+                name: "CFinder",
                 color: "black",
                 pointInterval: 1,
                 pointStart: 2,
@@ -301,7 +302,7 @@ var plot = function(data, graph) {
             },
             {
                 type: "line",
-                name: name,
+                name: "Link",
                 color: "orange",
                 pointInterval: 1,
                 pointStart: 2,
@@ -309,7 +310,7 @@ var plot = function(data, graph) {
             },
             {
                 type: "line",
-                name: name,
+                name: "GCE",
                 color: "pink",
                 pointInterval: 1,
                 pointStart: 2,
