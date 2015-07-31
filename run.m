@@ -1,9 +1,8 @@
 % load('karate.mat')
 % M = full(Problem.A);
-% findCommunityPara(M,1.6);
+% findCommunityPara(M,0.5420);
 
-% something
-A = csvread('Networks/Network.1/network.dat');
+A = csvread('directed_networks/network.dat');
 M = sparse(A(length(A), 1), A(length(A), 1));
 M = full(M);
 
@@ -14,4 +13,4 @@ for i = drange(1, length(A))
         M(j, k) = 1;
 end;
 
-findCommunityPara(M,0.38);
+findCommunityPara(M,0.412);

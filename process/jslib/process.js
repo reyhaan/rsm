@@ -109,7 +109,7 @@ var getSimilarArray = function(gen_nodes, rsm_nodes, target_node) {
 };
 
 // fetch nodesets data for RSM algorithm
-$.get("../rsm_com/communities.txt", function(data) {
+$.get("../../communities.txt", function(data) {
 
 	data = data.split("#");
 	for(var i = 0; i < data.length; i++) {
@@ -119,7 +119,7 @@ $.get("../rsm_com/communities.txt", function(data) {
 	}
 
 	// Fetch nodesets for any other algorithm.
-	$.get("../generated_com/community.dat", function(data) {
+	$.get("../directed_networks/community.dat", function(data) {
 		data = data.split("\n");
 		var arr = [];
 		for(var i = 0; i < data.length; i++) {
@@ -132,8 +132,8 @@ $.get("../rsm_com/communities.txt", function(data) {
 		}
 
 		// Select the node for which yoou have to run the calculations.
-		var fd = getSimilarArray(gen_nodes['5'], rsm_nodes, 5);
-		var fr = gen_nodes['5'];
+		var fd = getSimilarArray(gen_nodes['1'], rsm_nodes, 2);
+		var fr = gen_nodes['1'];
 
 		console.log(fd);
 		console.log(fr);
@@ -143,3 +143,181 @@ $.get("../rsm_com/communities.txt", function(data) {
 	});
 
 });
+
+var precisionArray = [0.671, 0.548, 0.465, 0.358, 0.280, 0.220, 0.110];
+var recallArray = [1, 0.970, 0.750, 0.660, 0.500, 0.290, 0.159];
+var fscoreArray = [0.803, 0.708, 0.574, 0.464, 0.358, 0.250, 0.128];
+
+
+// Precision data
+var precisionCopra = [0.16, 0.16, 0.16, 0.14, 0.14, 0.12, 0.12];
+var precisionCis = [0.1, 0.05, 0.04, 0.03, 0.02, 0.01, 0.01];
+var precisionCfinder = [0.4, 0.38, 0.36, 0.35, 0.32, 0.30, 0.28];
+var precisionLink = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1];
+var precisionGce = [0.682, 0.184, 0.02, 0.03, 0.05, 0.08, 0.1];
+
+// Recall data
+var recallCopra = [0.97, 0.97, 0.93, 0.82, 0.70, 0.68, 0.63];
+var recallCis = [0.61, 0.18, 0.10, 0.10, 0.08, 0.10, 0.02];
+var recallCfinder = [0.38, 0.35, 0.32, 0.30, 0.26, 0.25, 0.22];
+var recallLink = [0.99, 1, 1, 1, 1, 1, 1];
+var recallGce = [0.25, 0.02, 0, 0, 0, 0, 0];
+
+// fscore data
+var fscoreCopra = [];
+var fscoreCis = [];
+var fscoreCfinder = [];
+var fscoreLink = [];
+var fscoreGce = [];
+
+var data = {
+	precision: {
+		rsm: precisionArray,
+		copra: precisionCopra,
+		cis: precisionCis,
+		cfinder: precisionCfinder,
+		link: precisionLink,
+		gce: precisionGce
+	},
+	recall: {
+		rsm: recallArray,
+		copra: recallCopra,
+		cis: recallCis,
+		cfinder: recallCfinder,
+		link: recallLink,
+		gce: recallGce
+	},
+	fscore: {
+		rsm: fscoreArray,
+		copra: fscoreCopra,
+		cis: fscoreCis,
+		cfinder: fscoreCfinder,
+		link: fscoreLink,
+		gce: fscoreGce
+	}
+};
+
+var plot = function(data, graph) {
+
+	var name = null;
+
+	switch (graph){
+		case '#precision':
+			data = data.precision;
+			name = 'Precision';
+			break;
+
+		case '#recall':
+			data = data.recall;
+			name = 'Recall';
+			break;
+
+		case '#fscore':
+			data = data.fscore;
+			name = 'F-score';
+			break
+		
+	}
+
+
+	$('body').find(graph).highcharts({
+            chart: {
+                zoomType: 'x'
+            },
+            title: {
+                text: name+' vs. Om'
+            },
+            xAxis: {
+            	minTickInterval: 1,
+                type: 'linear',
+                title: {
+                    text: 'Om',
+                    legend: false
+                }
+            },
+            yAxis: [{
+                title: {
+                    text: name,
+                    legend: false
+                },
+                minTickInterval: 0.1,
+                max: 1,
+                min: 0,
+                minRange: 1,
+                lineWidth: 1
+            },
+            {
+            	title: {
+                    text: '',
+                },
+                opposite: true,
+                
+                lineWidth: 1
+            }],
+            legend: {
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            tooltip: {
+                valueSuffix: '',
+                crosshairs: true,
+                shared: true,
+                useHTML: true,
+                enabled: true
+            },
+            series: [{
+                type: "line",
+                name: name,
+                color: "#FF0000",
+                pointInterval: 1,
+                pointStart: 2,
+                data: data.rsm
+            },
+            {
+                type: "line",
+                name: name,
+                color: "green",
+                pointInterval: 1,
+                pointStart: 2,
+                data: data.copra
+            },
+            {
+                type: "line",
+                name: name,
+                color: "blue",
+                pointInterval: 1,
+                pointStart: 2,
+                data: data.cis
+            },
+            {
+                type: "line",
+                name: name,
+                color: "black",
+                pointInterval: 1,
+                pointStart: 2,
+                data: data.cfinder
+            },
+            {
+                type: "line",
+                name: name,
+                color: "orange",
+                pointInterval: 1,
+                pointStart: 2,
+                data: data.link
+            },
+            {
+                type: "line",
+                name: name,
+                color: "pink",
+                pointInterval: 1,
+                pointStart: 2,
+                data: data.gce
+            }]
+        });
+}
+
+plot(data, '#precision');
+plot(data, '#recall');
+plot(data, '#fscore');

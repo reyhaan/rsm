@@ -1,0 +1,196 @@
+Sooms-MacBook-Air:directed_networks soombehera$ ./benchmark -N 1000 -k 15 -maxk 50 -mu 0.1 -minc 20 -maxc 50
+setting... -N 1000
+setting... -k 15
+setting... -maxk 50
+setting... -mu 0.1
+setting... -minc 20
+setting... -maxc 50
+
+**************************************************************
+number of nodes:	1000
+average degree:	15
+maximum degree:	50
+exponent for the degree distribution:	2
+exponent for the community size distribution:	1
+mixing parameter:	0.1
+number of overlapping nodes:	0
+number of memberships of the overlapping nodes:	0
+community size range set equal to [20 , 50]
+**************************************************************
+
+building communities... 
+connecting communities... 
+recording network...
+
+
+---------------------------------------------------------------------------
+network of 1000 vertices and 15381 edges;	 average degree = 15.381
+
+average mixing parameter (in-links): 0.0992878 +/- 0.0364867
+average mixing parameter (out-links): 0.111551 +/- 0.146311
+p_in: 0.475295	p_out: 0.00147017
+
+
+Sooms-MacBook-Air:directed_networks soombehera$ ./benchmark -N 1000 -k 15 -maxk 50 -mu 0.2 -minc 20 -maxc 50
+setting... -N 1000
+setting... -k 15
+setting... -maxk 50
+setting... -mu 0.2
+setting... -minc 20
+setting... -maxc 50
+
+**************************************************************
+number of nodes:	1000
+average degree:	15
+maximum degree:	50
+exponent for the degree distribution:	2
+exponent for the community size distribution:	1
+mixing parameter:	0.2
+number of overlapping nodes:	0
+number of memberships of the overlapping nodes:	0
+community size range set equal to [20 , 50]
+**************************************************************
+
+building communities... 
+connecting communities... 
+recording network...
+
+
+---------------------------------------------------------------------------
+network of 1000 vertices and 15597 edges;	 average degree = 15.597
+
+average mixing parameter (in-links): 0.197946 +/- 0.0420474
+average mixing parameter (out-links): 0.198586 +/- 0.164613
+p_in: 0.400728	p_out: 0.00307365
+
+
+Sooms-MacBook-Air:directed_networks soombehera$ ./benchmark -N 1000 -k 15 -maxk 50 -mu 0.3 -minc 20 -maxc 50
+setting... -N 1000
+setting... -k 15
+setting... -maxk 50
+setting... -mu 0.3
+setting... -minc 20
+setting... -maxc 50
+
+**************************************************************
+number of nodes:	1000
+average degree:	15
+maximum degree:	50
+exponent for the degree distribution:	2
+exponent for the community size distribution:	1
+mixing parameter:	0.3
+number of overlapping nodes:	0
+number of memberships of the overlapping nodes:	0
+community size range set equal to [20 , 50]
+**************************************************************
+
+building communities... 
+connecting communities... 
+recording network...
+
+
+---------------------------------------------------------------------------
+network of 1000 vertices and 15948 edges;	 average degree = 15.948
+
+average mixing parameter (in-links): 0.301396 +/- 0.0378296
+average mixing parameter (out-links): 0.300178 +/- 0.133722
+p_in: 0.38245	p_out: 0.00476939
+
+
+Sooms-MacBook-Air:directed_networks soombehera$ ./benchmark -N 1000 -k 15 -maxk 50 -mu 0.4 -minc 20 -maxc 50
+setting... -N 1000
+setting... -k 15
+setting... -maxk 50
+setting... -mu 0.4
+setting... -minc 20
+setting... -maxc 50
+
+**************************************************************
+number of nodes:	1000
+average degree:	15
+maximum degree:	50
+exponent for the degree distribution:	2
+exponent for the community size distribution:	1
+mixing parameter:	0.4
+number of overlapping nodes:	0
+number of memberships of the overlapping nodes:	0
+community size range set equal to [20 , 50]
+**************************************************************
+
+building communities... 
+connecting communities... 
+recording network...
+
+
+---------------------------------------------------------------------------
+network of 1000 vertices and 15369 edges;	 average degree = 15.369
+
+average mixing parameter (in-links): 0.398798 +/- 0.0392429
+average mixing parameter (out-links): 0.398741 +/- 0.0857423
+p_in: 0.30482	p_out: 0.00623702
+
+
+Sooms-MacBook-Air:directed_networks soombehera$ ./benchmark -N 1000 -k 15 -maxk 50 -mu 0.5 -minc 20 -maxc 50
+setting... -N 1000
+setting... -k 15
+setting... -maxk 50
+setting... -mu 0.5
+setting... -minc 20
+setting... -maxc 50
+
+**************************************************************
+number of nodes:	1000
+average degree:	15
+maximum degree:	50
+exponent for the degree distribution:	2
+exponent for the community size distribution:	1
+mixing parameter:	0.5
+number of overlapping nodes:	0
+number of memberships of the overlapping nodes:	0
+community size range set equal to [20 , 50]
+**************************************************************
+
+building communities... 
+connecting communities... 
+recording network...
+
+
+---------------------------------------------------------------------------
+network of 1000 vertices and 15622 edges;	 average degree = 15.622
+
+average mixing parameter (in-links): 0.498129 +/- 0.0356309
+average mixing parameter (out-links): 0.498821 +/- 0.0697663
+p_in: 0.26863	p_out: 0.0080326
+
+
+Sooms-MacBook-Air:directed_networks soombehera$ ./benchmark -N 1000 -k 15 -maxk 50 -mu 0.6 -minc 20 -maxc 50
+setting... -N 1000
+setting... -k 15
+setting... -maxk 50
+setting... -mu 0.6
+setting... -minc 20
+setting... -maxc 50
+
+**************************************************************
+number of nodes:	1000
+average degree:	15
+maximum degree:	50
+exponent for the degree distribution:	2
+exponent for the community size distribution:	1
+mixing parameter:	0.6
+number of overlapping nodes:	0
+number of memberships of the overlapping nodes:	0
+community size range set equal to [20 , 50]
+**************************************************************
+
+building communities... 
+connecting communities... 
+recording network...
+
+
+---------------------------------------------------------------------------
+network of 1000 vertices and 15064 edges;	 average degree = 15.064
+
+average mixing parameter (in-links): 0.598644 +/- 0.0392071
+average mixing parameter (out-links): 0.599529 +/- 0.0617081
+p_in: 0.206262	p_out: 0.009313

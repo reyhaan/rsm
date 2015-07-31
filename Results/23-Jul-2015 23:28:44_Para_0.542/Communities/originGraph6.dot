@@ -1,0 +1,33 @@
+graph G {
+    2 [style=filled, color="#CCFFFF"];
+    3 [style=filled, color="#CCFFFF"];
+    13 [style=filled, color="#CCFFFF"];
+    17 [style=filled, color="#CCFFFF"];
+    1 -- 6 [len= 3]
+    1 -- 18 [len= 3]
+    1 -- 19 [len= 3]
+    2 -- 3 [len= 3]
+    2 -- 7 [len= 3]
+    3 -- 15 [len= 3]
+    3 -- 17 [len= 3]
+    4 -- 6 [len= 3]
+    4 -- 20 [len= 3]
+    5 -- 8 [len= 3]
+    5 -- 16 [len= 3]
+    5 -- 18 [len= 3]
+    6 -- 9 [len= 3]
+    8 -- 16 [len= 3]
+    8 -- 18 [len= 3]
+    9 -- 10 [len= 3]
+    10 -- 20 [len= 3]
+    11 -- 15 [len= 3]
+    11 -- 17 [len= 3]
+    12 -- 14 [len= 3]
+    12 -- 19 [len= 3]
+    13 -- 20 [len= 3]
+    14 -- 16 [len= 3]
+    14 -- 18 [len= 3]
+    14 -- 19 [len= 3]
+    15 -- 17 [len= 3]
+    18 -- 19 [len= 3]
+}

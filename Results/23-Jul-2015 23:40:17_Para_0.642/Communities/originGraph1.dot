@@ -1,0 +1,86 @@
+graph G {
+    1 [style=filled, color="#CCFFFF"];
+    2 [style=filled, color="#CCFFFF"];
+    3 [style=filled, color="#CCFFFF"];
+    4 [style=filled, color="#CCFFFF"];
+    5 [style=filled, color="#CCFFFF"];
+    6 [style=filled, color="#CCFFFF"];
+    7 [style=filled, color="#CCFFFF"];
+    8 [style=filled, color="#CCFFFF"];
+    9 [style=filled, color="#CCFFFF"];
+    10 [style=filled, color="#CCFFFF"];
+    11 [style=filled, color="#CCFFFF"];
+    12 [style=filled, color="#CCFFFF"];
+    13 [style=filled, color="#CCFFFF"];
+    14 [style=filled, color="#CCFFFF"];
+    15 [style=filled, color="#CCFFFF"];
+    16 [style=filled, color="#CCFFFF"];
+    17 [style=filled, color="#CCFFFF"];
+    18 [style=filled, color="#CCFFFF"];
+    19 [style=filled, color="#CCFFFF"];
+    20 [style=filled, color="#CCFFFF"];
+    1 -- 4 [len= 2]
+    1 -- 6 [len= 2]
+    1 -- 12 [len= 2]
+    1 -- 15 [len= 2]
+    1 -- 18 [len= 2]
+    2 -- 3 [len= 2]
+    2 -- 11 [len= 2]
+    2 -- 13 [len= 2]
+    2 -- 15 [len= 2]
+    2 -- 17 [len= 2]
+    2 -- 18 [len= 2]
+    2 -- 20 [len= 2]
+    3 -- 5 [len= 2]
+    3 -- 8 [len= 2]
+    3 -- 9 [len= 2]
+    3 -- 13 [len= 2]
+    3 -- 17 [len= 2]
+    3 -- 18 [len= 2]
+    4 -- 11 [len= 2]
+    4 -- 12 [len= 2]
+    4 -- 15 [len= 2]
+    4 -- 20 [len= 2]
+    5 -- 6 [len= 2]
+    5 -- 10 [len= 2]
+    5 -- 14 [len= 2]
+    5 -- 16 [len= 2]
+    5 -- 19 [len= 2]
+    6 -- 7 [len= 2]
+    6 -- 12 [len= 2]
+    6 -- 13 [len= 2]
+    7 -- 8 [len= 2]
+    7 -- 12 [len= 2]
+    7 -- 15 [len= 2]
+    7 -- 20 [len= 2]
+    8 -- 12 [len= 2]
+    8 -- 13 [len= 2]
+    8 -- 17 [len= 2]
+    8 -- 18 [len= 2]
+    8 -- 20 [len= 2]
+    9 -- 13 [len= 2]
+    9 -- 14 [len= 2]
+    9 -- 17 [len= 2]
+    9 -- 18 [len= 2]
+    9 -- 20 [len= 2]
+    10 -- 13 [len= 2]
+    10 -- 14 [len= 2]
+    10 -- 16 [len= 2]
+    10 -- 19 [len= 2]
+    11 -- 16 [len= 2]
+    11 -- 17 [len= 2]
+    11 -- 19 [len= 2]
+    11 -- 20 [len= 2]
+    12 -- 15 [len= 2]
+    13 -- 17 [len= 2]
+    13 -- 18 [len= 2]
+    14 -- 16 [len= 2]
+    14 -- 19 [len= 2]
+    14 -- 20 [len= 2]
+    15 -- 17 [len= 2]
+    16 -- 19 [len= 2]
+    17 -- 18 [len= 2]
+    17 -- 19 [len= 2]
+    18 -- 19 [len= 2]
+    18 -- 20 [len= 2]
+}
